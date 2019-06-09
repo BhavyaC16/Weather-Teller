@@ -1,6 +1,7 @@
 from apikey import key
 import urllib.request
 
+
 k = key()
 
 # function to get weather response
@@ -10,7 +11,7 @@ def weather_response(location, API_key = k):
 	webpage = urllib.request.urlopen(url)
 	json = str(webpage.read())
 	json = json[1:]
-	print(json)
+	#print(json)
 	return json
 
 # function to check for valid response
@@ -101,4 +102,4 @@ def get_sealevel(json, n=0, t="03:00:00"):
 		message = 'Invalid Time Input'
 		return message
 		
-weather_response("Delhi")
+weather_response("singapore")
