@@ -1,12 +1,10 @@
-#NAME        : BHAVYA CHOPRA 
-#ROLL NUMBER : 2018333
-#SECTION     : B
-#GROUP       : 6
+from apikey import key
+import urllib.request
+
+k = key()
 
 # function to get weather response
-
-import urllib.request
-def weather_response(location, API_key = "cd05d8c81889d20eed43fed129efec2b"):
+def weather_response(location, API_key = k):
 	""" The weather_response function is used to extract the weather response forecast from the web-service into the program. It converts the JSON Data into a string for further processing"""
 	url = "http://api.openweathermap.org/data/2.5/forecast?q=" + location + "&APPID=" + API_key
 	webpage = urllib.request.urlopen(url)
