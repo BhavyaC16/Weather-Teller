@@ -14,34 +14,6 @@ master.configure(bg = 'white')
 n = 0
 t = '00:00:00'
 
-def n0func():
-	n = 0
-def n1func():
-	n = 1
-def n2func():
-	n = 2
-def n3func():
-	n = 3
-def n4func():
-	n = 4
-
-def func00():
-	t = '00:00:00'
-def func03():
-	t = '03:00:00'
-def func06():
-	t = '06:00:00'
-def func09():
-	t = '09:00:00'
-def func12():
-	t = '12:00:00'
-def func15():
-	t = '15:00:00'
-def func18():
-	t = '18:00:00'
-def func21():
-	t = '21:00:00'
-
 def submitfunc():
 	location = locationTextbox.get()
 	json = weather_response(location)
@@ -72,12 +44,12 @@ def submitfunc():
 	elif(var21.get()==1):
 		t = '21:00:00'
 	
-	temp = get_temperature(json,n,t)
+	temp = int(get_temperature(json,n,t)) - 273
 	humidity = get_humidity(json,n,t)
-	pressure = get_pressure(json,n,t)
+	pressure = float(get_pressure(json,n,t))*100
 	wind = get_wind(json,n,t)
 	sealevel = get_sealevel(json,n,t)
-	tempLabel = Label(master, text=("Temperature:  "+str(temp)+" °F"))
+	tempLabel = Label(master, text=("Temperature:  "+str(temp)+" °C"))
 	tempLabel.configure(bg = 'white')
 	tempLabel.place(relx = 0.40, rely = 0.70, anchor="center")
 	humidityLabel = Label(master, text=("Humidity:  "+str(humidity)+"%"))
@@ -96,6 +68,14 @@ def submitfunc():
 img = ImageTk.PhotoImage(Image.open("WeatherLogo.jpeg"))
 panel = Label(master, image=img)
 panel.pack(side="top", fill="none",expand="no")
+
+titleLabel1 = Label(master, text="Weather")
+titleLabel1.config(font=("Arial",50), bg = 'white')
+titleLabel1.place(relx = 0.26, rely = 0.15, anchor = "center")
+titleLabel2 = Label(master, text="Teller")
+titleLabel2.config(font=("Arial",50), bg = 'white')
+titleLabel2.place(relx = 0.70, rely = 0.15, anchor = "center")
+
 
 locationLabel = Label(master, text="Enter Location: ")
 locationLabel.configure(bg = 'white')
