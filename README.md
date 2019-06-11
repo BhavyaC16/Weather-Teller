@@ -14,4 +14,4 @@ For a selected date and time, the application displays the following:
  3. Select the date and time for the forecast.
  4. Click on "Tell Me The Weather"
  
- Note: You would need a API key to access the web service. To get your own API key, visit [openweathermap.org/appid](http://openweathermap.org/appid) and sign up. Then replace '<insert api key>' in line 11 of [weatherTeller.py](https://github.com/BhavyaC16/Weather-Teller/blob/master/weatherTeller.py) with your API key.
+ Note: You would need a API key to access the web service. To get your own API key, visit [openweathermap.org/appid](http://openweathermap.org/appid) and sign up. Then enter your API key in line 11 of [weatherTeller.py](https://github.com/BhavyaC16/Weather-Teller/blob/master/weatherTeller.py)
