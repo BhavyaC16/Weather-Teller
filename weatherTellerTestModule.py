@@ -1,7 +1,5 @@
-#NAME        : BHAVYA CHOPRA 
-#ROLL NUMBER : 2018333
-#SECTION     : B
-#GROUP       : 6
+# AUTHOR: BHAVYA CHOPRA 
+
 
 """ This module is used to test the functions of the module a1.py by the method of unittesting, which is testing of a unit of code in isolation"""
 

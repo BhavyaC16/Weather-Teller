@@ -1,3 +1,5 @@
+# AUTHOR: BHAVYA CHOPRA 
+
 from tkinter import *
 from PIL import ImageTk, Image
 from os import *

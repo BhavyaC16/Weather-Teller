@@ -1,11 +1,14 @@
-from apikey import key
+# AUTHOR: BHAVYA CHOPRA
+
+
+#from apikey import key
 import urllib.request
 
 
-k = key()
+#k = key()
 
 # function to get weather response
-def weather_response(location, API_key = k):
+def weather_response(location, API_key = <insert api key>): # replace '<insert api key>' with your key
 	""" The weather_response function is used to extract the weather response forecast from the web-service into the program. It converts the JSON Data into a string for further processing"""
 	url = "http://api.openweathermap.org/data/2.5/forecast?q=" + location + "&APPID=" + API_key
 	webpage = urllib.request.urlopen(url)
